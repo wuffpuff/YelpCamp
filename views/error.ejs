@@ -1,0 +1,8 @@
+<%layout('layouts/boilerplate') %>
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading"><%=err.message %> </h4>
+    <% if(process.env.NODE.ENV !== "production") { %> <!--if you are not on "production" show err.stack-->  
+    <p><%=err.stack%></p> <!--err.stack shows what the error is, it is used during production-->
+    <!--but for user experience dont use err.stack but use just fancy stuff, user friendly-->
+    <% } %> 
+  </div>

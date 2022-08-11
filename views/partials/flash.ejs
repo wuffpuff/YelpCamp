@@ -1,0 +1,17 @@
+
+<!--flash message when successfully executed-->
+<% if (success && success.length) { %> <!--if success array exists and it is not empty-->
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <%= success %> <!--print that property inside 'success' array -->
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %> 
+
+<!--flash message when an error occurred-->
+<% if (error && error.length) { %> <!--if error array exists and it is not empty-->
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <%= error %> <!--print that property inside 'error' array -->
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %> 
+
